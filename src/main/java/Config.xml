@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address1" class="com.firstQuestion.Address" >
+     
+     <property name="street">
+     <value>Allahabad road</value>
+     </property>
+      
+     <property name="city">
+     <value>Rewa</value>
+     </property> 
+     
+      <property name="state">
+     <value>Madhya Pradesh</value>
+     </property>
+
+      <property name="country">
+     <value>India</value>
+     </property>
+
+      <property name="zip">
+     <value>486001</value>
+     </property>
+
+   </bean>  
+   
+   <bean id="customer" class="com.firstQuestion.Customer">
+   <property name="customerId">
+     <value>58479</value>
+     </property>
+      
+     <property name="customerName">
+     <value>Kanak Dwivedi</value>
+     </property> 
+     
+      <property name="customerContact">
+     <value>1815</value>
+     </property>
+
+      
+     <property name="customerAddress" >
+     <ref bean="address1"/>
+     </property>
+     
+
+      </bean>
+
+</beans>
